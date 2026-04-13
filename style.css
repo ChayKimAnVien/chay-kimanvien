@@ -1,54 +1,198 @@
-body {
+:root {
+    --primary-color: #5d745d; /* Màu xanh lá dịu */
+    --accent-color: #d4a373;  /* Màu vàng đất ấm */
+    --bg-light: #fefae0;
+    --text-dark: #333d29;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5efe6;
-    color: #4b3f2f;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #e8dcc8;
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #fff;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.gallery .images {
+/* Navbar */
+.navbar {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('Images/banner.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-.gallery img {
-    width: 30%;
-    border-radius: 10px;
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #d6c2a1;
-    border: none;
+.btn-primary {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 35px;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 20px 20px 0 var(--bg-light);
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    margin: 15px 0;
+}
+
+/* Menu Gallery */
+.gallery {
+    background: var(--bg-light);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.menu-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 300px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 15px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.menu-item:hover .overlay {
+    transform: translateY(0);
+}
+
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact */
+.btn-map {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-button:hover {
-    background-color: #c5ae8c;
+.btn-map:hover {
+    background: var(--primary-color);
+    color: white;
 }
 
 footer {
-    background-color: #e8dcc8;
-    padding: 10px;
+    padding: 40px;
     text-align: center;
+    background: #333;
+    color: #999;
+    font-size: 0.9rem;
 }
-img {
-  max-width: 1000px;
-  max-height: 1000px;
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { display: none; }
 }
