@@ -64,7 +64,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 80vh;
+    height: 59vh; /* Giảm từ 80vh xuống 60vh hoặc 50vh */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
                 url('Images/banner.jpg') center/cover no-repeat;
     display: flex;
