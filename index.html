@@ -4,82 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kim An Viên | Ẩm Thực Chay Thanh Tịnh</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <meta name="description" content="Kim An Viên phục vụ các món chay thanh đạm, tươi sạch mỗi ngày tại 109B Lê Đình Thám, Tân Phú, TP. HCM.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">KIM AN VIÊN</div>
-    <ul class="nav-links">
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#menu">Thực đơn</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-    </ul>
-</nav>
+<header class="site-header">
+    <nav class="navbar" aria-label="Điều hướng chính">
+        <a class="brand" href="#top" aria-label="Kim An Viên">
+            <img src="Images/logo.png" alt="Logo Kim An Viên" width="44" height="44">
+            <span>KIM AN VIÊN</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#menu">Thực đơn</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+        <a class="nav-cta" href="#contact">Đặt món</a>
+    </nav>
+</header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Ẩm thực chay thanh tịnh</h1>
-        <p>Gói trọn hương vị thiên nhiên vào từng bữa ăn gia đình</p>
-        <a href="#menu" class="btn-primary">Khám phá ngay</a>
-    </div>
-</section>
-
-<section id="about" class="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text">
-                <h2>Về Kim An Viên</h2>
-                <div class="divider"></div>
-                <p>Chúng tôi chuyên phục vụ các món chay thanh đạm, nấu từ nguyên liệu tươi sạch mỗi ngày. Với tâm niệm mang đến sức khỏe và sự bình an, thực đơn tại Kim An Viên luôn thay đổi để thực khách cảm nhận được sự mới mẻ và ấm cúng như bữa cơm nhà.</p>
+<main id="top">
+    <section class="hero reveal">
+        <div class="hero-content">
+            <span class="eyebrow">Cơm chay thanh đạm</span>
+            <h1>Ẩm thực chay thanh tịnh cho bữa cơm ấm như nhà</h1>
+            <p>Gói trọn hương vị thiên nhiên vào từng bữa ăn gia đình, với nguyên liệu tươi sạch và thực đơn thay đổi mỗi ngày.</p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-primary">Xem menu</a>
+                <a href="#contact" class="btn btn-secondary">Đặt món ngay</a>
             </div>
-            <div class="about-image">
-                <img src="Images/banner.jpg" alt="Không gian quán">
+            <div class="hero-highlights" aria-label="Điểm nổi bật">
+                <span><i class="fas fa-leaf"></i> Món chay sạch</span>
+                <span><i class="fas fa-bowl-food"></i> Giá bình dân</span>
+                <span><i class="fas fa-calendar-day"></i> Đổi món mỗi ngày</span>
             </div>
         </div>
-    </div>
-</section>
-
-<section id="menu" class="gallery">
-    <h2>Món ăn nổi bật</h2>
-    <div class="divider"></div>
-    <div class="container">
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="Images/bun_hue.jpg" alt="Bún Bò Huế Chay">
-                <div class="overlay"><h3>Bún Huế Chay</h3></div>
-            </div>
-            <div class="menu-item">
-                <img src="Images/bun_rieu.jpg" alt="Bún Riêu Chay">
-                <div class="overlay"><h3>Bún Riêu Chay</h3></div>
-            </div>
-            <div class="menu-item">
-                <img src="Images/hu_tieu.jpg" alt="Hủ Tiếu Chay">
-                <div class="overlay"><h3>Hủ Tiếu Chay</h3></div>
-            </div>
-			<div class="menu-item">
-                <img src="Images/cari.jpg" alt="Cà Ri Chay">
-                <div class="overlay"><h3>Cà Ri Chay</h3></div>
+        <div class="hero-media" aria-label="Món ăn Kim An Viên">
+            <img src="Images/mon_an.jpg" alt="Món chay tại Kim An Viên" width="900" height="675" fetchpriority="high">
+            <div class="hero-note">
+                <strong>Mỗi ngày một vị mới</strong>
+                <span>Nấu nóng, thanh đạm, vừa miệng gia đình</span>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Kết nối với chúng tôi</h2>
-        <p><i class="fas fa-map-marker-alt"></i> 109B Lê Đình Thám, P. Tân Quý, Q. Tân Phú, TP. HCM</p>
-        <p><i class="fas fa-phone"></i> Hotline: 0123 456 789</p>
-        <button class="btn-map" onclick="goToMap()">
-            <i class="fas fa-directions"></i> Chỉ đường trên Google Maps
-        </button>
-    </div>
-</section>
+    <section id="about" class="about section reveal">
+        <div class="container">
+            <div class="section-kicker">Về Kim An Viên</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Quán chay nhỏ, bữa ăn lành, hương vị gần gũi.</h2>
+                    <p>Chúng tôi chuyên phục vụ các món chay thanh đạm, nấu từ nguyên liệu tươi sạch mỗi ngày. Với tâm niệm mang đến sức khỏe và sự bình an, thực đơn tại Kim An Viên luôn thay đổi để thực khách cảm nhận được sự mới mẻ và ấm cúng như bữa cơm nhà.</p>
+                    <div class="about-list">
+                        <span><i class="fas fa-seedling"></i> Nguyên liệu tươi sạch</span>
+                        <span><i class="fas fa-heart"></i> Nấu bằng sự tận tâm</span>
+                        <span><i class="fas fa-house"></i> Không gian gia đình</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Images/mat_tien.jpg" alt="Không gian quán Kim An Viên" width="900" height="675" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section section reveal">
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <div class="section-kicker">Thực đơn hôm nay</div>
+                    <h2>Món ăn nổi bật</h2>
+                </div>
+                <p>Các món chay quen thuộc, nấu thanh vị, dễ ăn và phù hợp cho bữa sáng, trưa hoặc tối.</p>
+            </div>
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img src="Images/bun_hue.jpg" alt="Bún Bò Huế Chay" width="640" height="480" loading="lazy" decoding="async">
+                    <div class="menu-card-body">
+                        <span class="menu-tag">Đậm đà</span>
+                        <h3>Bún Huế Chay</h3>
+                        <p>Nước dùng thanh, thơm sả, cay nhẹ và nhiều rau ăn kèm.</p>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img src="Images/bun_rieu.jpg" alt="Bún Riêu Chay" width="640" height="480" loading="lazy" decoding="async">
+                    <div class="menu-card-body">
+                        <span class="menu-tag">Dễ ăn</span>
+                        <h3>Bún Riêu Chay</h3>
+                        <p>Vị riêu chay nhẹ nhàng, chua thanh, hợp cho mọi bữa trong ngày.</p>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img src="Images/hu_tieu.jpg" alt="Hủ Tiếu Chay" width="640" height="480" loading="lazy" decoding="async">
+                    <div class="menu-card-body">
+                        <span class="menu-tag">Thanh vị</span>
+                        <h3>Hủ Tiếu Chay</h3>
+                        <p>Sợi hủ tiếu mềm dai, nước dùng trong và rau củ tươi ngọt.</p>
+                    </div>
+                </article>
+                <article class="menu-card">
+                    <img src="Images/cari.jpg" alt="Cà Ri Chay" width="640" height="480" loading="lazy" decoding="async">
+                    <div class="menu-card-body">
+                        <span class="menu-tag">Ấm bụng</span>
+                        <h3>Cà Ri Chay</h3>
+                        <p>Béo thơm vừa phải, dùng cùng bánh mì hoặc bún đều tròn vị.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+        <div class="container contact-card">
+            <div>
+                <div class="section-kicker">Ghé quán hôm nay</div>
+                <h2>Kết nối với chúng tôi</h2>
+                <p class="contact-intro">Một bữa chay sạch, ấm cúng và bình dân đang chờ bạn tại Kim An Viên.</p>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> 109B Lê Đình Thám, P. Tân Quý, Q. Tân Phú, TP. HCM</p>
+                <p><i class="fas fa-phone"></i> Hotline: 0123 456 789</p>
+                <button class="btn-map" onclick="goToMap()">
+                    <i class="fas fa-directions"></i> Chỉ đường trên Google Maps
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>&copy; 2026 Kim An Viên. Phát triển với tâm thành.</p>
+    <div class="footer-inner">
+        <strong>Kim An Viên</strong>
+        <p>&copy; 2026 Kim An Viên. Phát triển với tâm thành.</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>

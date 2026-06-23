@@ -1,19 +1,22 @@
-// Hàm mở Google Maps
 function goToMap() {
-    // Lưu ý: Link này nên thay bằng link thực tế của quán trên Google Maps
     const address = "109B Lê Đình Thám, Tân Quý, Tân Phú, Thành phố Hồ Chí Minh";
     const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-    window.open(mapUrl, "_blank");
+    window.open(mapUrl, "_blank", "noopener");
 }
 
-// Hiệu ứng Fade-in khi cuộn trang (Optional)
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 100) {
-            section.style.opacity = '1';
-            section.style.transform = 'translateY(0)';
-        }
-    });
-});
+const revealItems = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.14 });
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+}
